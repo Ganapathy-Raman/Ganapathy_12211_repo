@@ -25,7 +25,7 @@ public class CustomerRepoImpl implements CustomerRepo {
 	public String save(Customer customer) {
 		if (customer != null) {
 			entityManager.merge(customer);
-			return "Success";
+			return "Added Successfully";
 		} else {
 			return "Failed to add";
 		}
@@ -45,7 +45,7 @@ public class CustomerRepoImpl implements CustomerRepo {
 	public String update(Customer customer) {
 		if (customer != null) {
 			entityManager.merge(customer);
-			return "Success";
+			return "Updated Successfully";
 		} else {
 			return "Failed to update";
 		}
@@ -57,7 +57,7 @@ public class CustomerRepoImpl implements CustomerRepo {
 		Customer customer = entityManager.find(Customer.class, customerid);
 		if (customer != null) {
 			entityManager.remove(customer);
-			return "Success";
+			return "Deleted Successfully";
 		} else {
 			return "Failed to delete";
 		}

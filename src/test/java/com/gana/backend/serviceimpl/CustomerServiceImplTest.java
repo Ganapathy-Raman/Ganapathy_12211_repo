@@ -22,7 +22,7 @@ class CustomerServiceImplTest {
 	void testAddCustomer() {
 		Insurance insurance = new Insurance(0, 67, 38, 23, 4, 3, 43);
 		Customer customer = new Customer(0, "Guru", "Twenty", "up", "male", insurance);
-		assertEquals("Success", customerService.addCustomer(customer));
+		assertEquals("Added Successfully", customerService.addCustomer(customer));
 	}
 
 	@Test
@@ -50,7 +50,7 @@ class CustomerServiceImplTest {
 	void testUpdateCustomer() {
 		Insurance insurance = new Insurance(10, 25, 3, 23, 4, 3, 43);
 		Customer customer = new Customer(8, "George prabha", "thirty", "dgl", "male", insurance);
-		assertEquals("Success", customerService.updateCustomer(customer));
+		assertEquals("Updated Successfully", customerService.updateCustomer(customer));
 	}
 
 	@Test
@@ -58,11 +58,6 @@ class CustomerServiceImplTest {
 		Customer customer = null;
 		assertEquals("Failed to update", customerService.updateCustomer(customer));
 	}
-
-//	@Test
-//	void testDeleteCustomer() {
-//		assertEquals("Success", customerService.deleteCustomer(68));
-//	}
 
 	@Test
 	void testDeleteCustomer1() {

@@ -25,7 +25,7 @@ public class InsuranceRepoImpl implements InsuranceRepo {
 	public String save(Insurance insurance) {
 		if (insurance != null) {
 			entityManager.merge(insurance);
-			return "Success";
+			return "Added Successfully";
 		} else {
 			return "Failed to add";
 		}
@@ -45,7 +45,7 @@ public class InsuranceRepoImpl implements InsuranceRepo {
 	public String update(Insurance insurance) {
 		if (insurance != null) {
 			entityManager.merge(insurance);
-			return "Success";
+			return "Updated Successfully";
 		} else {
 			return "Failed to update";
 		}
@@ -57,7 +57,7 @@ public class InsuranceRepoImpl implements InsuranceRepo {
 		Insurance insurance = entityManager.find(Insurance.class, insuranceid);
 		if (insurance != null) {
 			entityManager.remove(insurance);
-			return "Success";
+			return "Deleted Successfully";
 		} else {
 			return "Failed to delete";
 		}

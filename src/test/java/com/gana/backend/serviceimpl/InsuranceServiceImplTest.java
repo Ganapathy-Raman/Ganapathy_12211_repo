@@ -18,7 +18,7 @@ class InsuranceServiceImplTest {
 	@Test
 	void testAddInsurance() {
 		Insurance insurance = new Insurance(0, 67, 35, 35, 56, 24, 67);
-		assertEquals("Success", insuranceService.addInsurance(insurance));
+		assertEquals("Added Successfully", insuranceService.addInsurance(insurance));
 	}
 
 	@Test
@@ -45,7 +45,7 @@ class InsuranceServiceImplTest {
 	@Test
 	void testUpdateInsurance() {
 		Insurance insurance = new Insurance(8, 67, 35, 35, 56, 24, 67);
-		assertEquals("Success", insuranceService.updateInsurance(insurance));
+		assertEquals("Updated Successfully", insuranceService.updateInsurance(insurance));
 
 	}
 
@@ -55,11 +55,6 @@ class InsuranceServiceImplTest {
 		assertEquals("Failed to update", insuranceService.updateInsurance(insurance));
 
 	}
-
-//	@Test
-//	void testDeleteInsurance() {
-//		assertEquals("Success", insuranceService.deleteInsurance(72));
-//	}
 
 	@Test
 	void testDeleteInsurance1() {
